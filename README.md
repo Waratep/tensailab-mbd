@@ -28,20 +28,20 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
 3. Modify class name at the first line and constructor.
 4. Modify constructor method.
 
-```Matlab
-coder.allowpcode('plain');
-```
+    ```Matlab
+    coder.allowpcode('plain');
+    ```
 
 5. Modify setupImpl(), stepImpl() and add releaseImpl() methods with C-code invocation.
 
-```Matlab
-if coder.target('Rtw')
-    coder.cinclude('put C header file here');
-    coder.ceval('put C source file here');
-elseif ( coder.target('Sfun') )
-    % Place simulation termination code here
-end
-```
+    ```Matlab
+    if coder.target('Rtw')
+        coder.cinclude('put C header file here');
+        coder.ceval('put C source file here');
+    elseif ( coder.target('Sfun') )
+        % Place simulation termination code here
+    end
+    ```
 
 6. Add getDescriptiveName(), isSupportedContext(context) and updateBuildInfo() methods for building information.
 
