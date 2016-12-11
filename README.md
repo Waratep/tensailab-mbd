@@ -37,13 +37,34 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
     ```Matlab
     if coder.target('rtw')
         coder.cinclude('put C header file here');
-        coder.ceval('put C source file here');
+        coder.ceval('put C function name here');
     elseif ( coder.target('Sfun') )
         % Place simulation termination code here
     end
     ```
 
-6. Add getDescriptiveName(), isSupportedContext(context) and updateBuildInfo() methods for building information.
+6. Add methods for building information.
+
+    ```Matlab
+    methods(Static)
+        function name = getDescriptiveName()
+            name = 'ttyACM Serial Transmit';
+        end
+        
+        function b = isSupportedContext(context)
+            b = context.isCodeGenTarget('rtw');
+        end
+                
+        function updateBuildInfo(buildInfo, context)
+            if context.isCodeGenTarget('rtw')
+                libroot = [mfilename('fullpath'), '/..'];
+                %buildInfo.addIncludePaths({[libroot, '/include']});
+                %buildInfo.addSourcePaths({[libroot, '/src']});
+                buildInfo.addSourceFiles( {'rpiserial_wrapper.cpp'});
+            end
+        end
+    end    
+    ```
 
 ## References
 1. [Create a Custom Library](https://www.mathworks.com/help/simulink/ug/creating-block-libraries.html).
