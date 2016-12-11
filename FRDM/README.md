@@ -26,7 +26,7 @@ A collection of Simulink models that extend features of NXP FRDM-KL25Z Microcont
    * USBSerial/CircBuffer.h
    * USBSerial/USBSerial.h
 6. Use **MATLAB System** block. 
-7. Add C code for hardware configuration and operation.
+7. Add C source and header files for hardware configuration and operation.
 8. Buffer size can be adjusted from USBSerial.h.
 ```Matlab
 CircBuffer<uint8_t,128> buf;
@@ -34,7 +34,6 @@ CircBuffer<uint8_t,128> buf;
 
 ## Blocks
 1. **USB Serial Transmit** and **USB Serial Receive** blocks for USB serial communication.
-2. 
 
 ## Test
 1. Open **frdmKL25Z.slx** library.

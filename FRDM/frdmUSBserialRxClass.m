@@ -50,7 +50,7 @@ classdef frdmUSBserialRxClass < matlab.System ...
             % Execute USB data transmission
             buffer = uint8(zeros(obj.msgLen,1));
             status = uint8(0);
-            if coder.target('Rtw')
+            if coder.target('rtw')
                 coder.cinclude('frdmserial_wrapper.h');
                 status = coder.ceval('kl25z_USBserial_Receive', coder.ref(buffer), uint8(obj.msgLen));
             elseif ( coder.target('Sfun') )
