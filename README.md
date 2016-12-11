@@ -36,8 +36,8 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
 
     ```Matlab
     if coder.target('rtw')
-        coder.cinclude('put C header file here');
-        coder.ceval('put C function name here');
+        coder.cinclude('PUT C HEADER FILE HERE');
+        coder.ceval('PUT C FUNCTION NAME HERE');
     elseif ( coder.target('Sfun') )
         % Place simulation termination code here
     end
@@ -60,7 +60,7 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
                 libroot = [mfilename('fullpath'), '/..'];
                 %buildInfo.addIncludePaths({[libroot, '/include']});
                 %buildInfo.addSourcePaths({[libroot, '/src']});
-                buildInfo.addSourceFiles( {'rpiserial_wrapper.cpp'});
+                buildInfo.addSourceFiles( {'PUT C SOURCE FILE HERE'});
             end
         end
     end    
