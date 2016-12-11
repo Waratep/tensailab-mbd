@@ -35,7 +35,7 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
 5. Modify setupImpl(), stepImpl() and add releaseImpl() methods with C-code invocation.
 
     ```Matlab
-    if coder.target('Rtw')
+    if coder.target('rtw')
         coder.cinclude('put C header file here');
         coder.ceval('put C source file here');
     elseif ( coder.target('Sfun') )
