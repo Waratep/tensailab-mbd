@@ -41,7 +41,7 @@ classdef frdmUSBserialTxClass < matlab.System ...
                 coder.cinclude('frdmserial_wrapper.h');
                 coder.ceval('kl25z_USBserial_Init');
             elseif ( coder.target('Sfun') )
-                % Place simulation termination code here
+                % Place simulation initialization code here
             end
         end
 
@@ -52,7 +52,7 @@ classdef frdmUSBserialTxClass < matlab.System ...
                 coder.cinclude('frdmserial_wrapper.h');
                 coder.ceval('kl25z_USBserial_Transmit', data, sz);
             elseif ( coder.target('Sfun') )
-                % Place simulation termination code here
+                % Place simulation execution code here
             end
         end
 

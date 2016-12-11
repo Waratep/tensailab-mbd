@@ -38,7 +38,7 @@ A collection of Simulink models that extend features of NXP FRDM-KL25Z Microcont
 
 ## Test
 1. Open **frdmKL25Z.slx** library.
-2. Open **demoUSBSerial.slx** model.
+2. Open **demoUSBserial.slx** model.
 3. Connect USB serial port of FRDM-KL25Z board with computer.
 4. Use terminal software to send 4 bytes. 
 5. Expected to see 4 echoed bytes with blinking color depends on the number of transmission.

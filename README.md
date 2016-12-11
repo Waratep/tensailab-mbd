@@ -66,6 +66,13 @@ A collection of Simulink models that extends features of ST Discovery Board Supp
     end    
     ```
 
+### Code generation tips for embedded boards
+1. Use **coder.ref(data)** to pass data by reference to C code as **void *data**.
+2. Input type and complexity are defined by inport's Signal Attributes.
+3. Data type declaration is in **rtwtypes.h** header file.
+4. **MATLAB System** block's sample time is **inherited** only.
+    
 ## References
 1. [Create a Custom Library](https://www.mathworks.com/help/simulink/ug/creating-block-libraries.html).
 2. [Structure of Device Driver System Object](https://www.mathworks.com/help/supportpkg/arduino/ug/introduction-to-device-drivers-and-system-objects.html).
+3. [Add Libraries to the Library Browser](https://www.mathworks.com/help/simulink/ug/adding-libraries-to-the-library-browser.html).
