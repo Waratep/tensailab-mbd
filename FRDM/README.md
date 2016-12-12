@@ -36,13 +36,6 @@ A collection of Simulink models that extend features of NXP FRDM-KL25Z Microcont
 ## Blocks
 1. **USB Serial Transmit** and **USB Serial Receive** blocks for USB serial communication.
 
-## Test
-1. Open **frdmKL25Z.slx** library.
-2. Open **demoUSBserial.slx** model.
-3. Connect USB serial port of FRDM-KL25Z board with computer.
-4. Use terminal software to send 4 bytes. 
-5. Expected to see 4 echoed bytes with blinking color depends on the number of transmission.
-
 ## References 
 1. [Structure of Device Driver System Object](https://www.mathworks.com/help/supportpkg/arduino/ug/introduction-to-device-drivers-and-system-objects.html)
 2. [USBSerial](https://developer.mbed.org/handbook/USBSerial).

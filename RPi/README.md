@@ -17,12 +17,6 @@ A collection of Simulink models that extend features of Hardware Support Package
 ## Blocks
 1. **ttyACM Serial Receive** and **ttyACM Serial Transmit** blocks for serial communication with USB devices.
 
-## Test
-1. Open **RPi.slx** library.
-2. Connect an Arduino board with **demoACMserial_Arduino** code to send binary 8-bit values from 0 - 250 stepping by 10 and receive reply to ON/OFF the on-board LED. 
-3. Run **demoACMserial.slx** model in External Mode.
-4. Expected to see blinking LED with value on Display block on computer.
-
 ## References
 1. [APT Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/linux/software/apt.md).
 2. [Serial Programming/termios](https://en.wikibooks.org/wiki/Serial_Programming/termios).
