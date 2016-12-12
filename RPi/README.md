@@ -19,7 +19,7 @@ A collection of Simulink models that extend features of Hardware Support Package
 
 ## Test
 1. Open **RPi.slx** library.
-2. Connect Arduino or mbed boards with code to send binary 8-bit values from 0 - 250 stepping by 10 to connect. 
+2. Connect an Arduino board with **demoACMserial_Arduino** code to send binary 8-bit values from 0 - 250 stepping by 10 and receive reply to ON/OFF the on-board LED. 
 3. Run **demoACMserial.slx** model in External Mode.
 4. Expected to see blinking LED with value on Display block on computer.
 

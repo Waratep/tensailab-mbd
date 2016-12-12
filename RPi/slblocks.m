@@ -1,6 +1,6 @@
 function blkStruct = slblocks
 
 Browser.Library = 'RPi';
-Browser.Name = 'Raspberry Pi Library';
+Browser.Name = 'Extened Raspberry Pi Library';
 
 blkStruct.Browser = Browser; 
