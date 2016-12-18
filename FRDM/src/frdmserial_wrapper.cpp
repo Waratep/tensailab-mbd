@@ -29,7 +29,7 @@ extern "C" void kl25z_USBserial_Transmit(void *data, uint8_T sz)
 extern "C" uint8_T kl25z_USBserial_Receive(void *buffer, uint8_T sz)
 {
     uint8_t status = 0;
-    uint8_t *data = (unsigned char *)buffer;
+    uint8_t *data = (uint8_t *)buffer;
     
     if (sz <= serial.available()) {
         status = 1;
