@@ -35,6 +35,7 @@ A collection of Simulink models that extend features of NXP FRDM-KL25Z Microcont
 
 ## Blocks
 1. **USB Serial Transmit** and **USB Serial Receive** blocks for USB serial communication.
+2. **USB Serial Frame Transmit** and **USB Serial Frame Receive** blocks for USB serial communication in frame format (start of frame/end of frame).
 
 ## References 
 1. [Structure of Device Driver System Object](https://www.mathworks.com/help/supportpkg/arduino/ug/introduction-to-device-drivers-and-system-objects.html)

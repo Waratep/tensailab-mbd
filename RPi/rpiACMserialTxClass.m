@@ -51,7 +51,7 @@ classdef rpiACMserialTxClass < matlab.System ...
             if coder.target('rtw')
                 sz = length(data);
                 coder.cinclude('rpiserial_wrapper.h');
-                coder.ceval('rpi_ACMserial_Transmit', coder.ref(data), sz);
+                coder.ceval('rpi_ACMserial_Transmit', coder.ref(data), uint8(sz));
             elseif ( coder.target('Sfun') )
                 % Place simulation execution code here
             end

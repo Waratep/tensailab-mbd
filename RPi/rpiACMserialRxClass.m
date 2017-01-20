@@ -152,7 +152,7 @@ classdef rpiACMserialRxClass < matlab.System ...
     
     methods(Static)
         function name = getDescriptiveName()
-            name = 'ttyACM Serial Transmit';
+            name = 'ttyACM Serial Receive';
         end
         
         function b = isSupportedContext(context)

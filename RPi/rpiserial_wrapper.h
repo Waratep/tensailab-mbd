@@ -9,6 +9,8 @@ extern "C" {
 void rpi_ACMserial_Init(uint8_T portIdx);
 void rpi_ACMserial_Transmit(void *data, uint8_T sz);
 uint8_T rpi_ACMserial_Receive(void *data, uint8_T sz);
+void rpi_ACMserial_FrameTransmit(void *data, uint8_T sz, uint8_T sof, uint8_T eof);
+uint8_T rpi_ACMserial_FrameReceive(void *data, uint8_T sz, uint8_T sof, uint8_T eof);
 void rpi_ACMserial_Terminate(void);
 
 #ifdef __cplusplus

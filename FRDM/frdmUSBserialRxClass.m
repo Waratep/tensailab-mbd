@@ -2,7 +2,7 @@ classdef frdmUSBserialRxClass < matlab.System ...
         & coder.ExternalDependency ...
         & matlab.system.mixin.Propagates ...
         & matlab.system.mixin.CustomIcon
-    % usbSerialRxClass  Extract data with preemble byte.
+    % usbSerialRxClass  Receive fixed-length data via USB serial.
     %#codegen
 
     % Public, tunable properties
@@ -71,6 +71,7 @@ classdef frdmUSBserialRxClass < matlab.System ...
                 % Place simulation termination code here
             end
         end
+        
         %% Backup/restore functions
         function s = saveObjectImpl(obj)
             % Set properties in structure s to values in object obj
